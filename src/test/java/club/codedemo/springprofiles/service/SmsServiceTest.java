@@ -7,8 +7,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ActiveProfiles;
 
 /**
- * 若测试使用JVM或设置环境变量的方法来设置项目情景
- * 则应该注释掉@ActiveProfiles("dev")注解
+ * SpringProfilesApplication中的main方法对单元测试并不生效
+ * 预在单元测试中指定某个情景，则需要使用@ActiveProfiles注解
+ *
+ * 注意：若测试使用JVM或设置环境变量的方法来设置项目情景的方法
+ * 则应该注释掉@ActiveProfiles("dev")注解以避免干扰
  */
 @SpringBootTest
 @ActiveProfiles("dev")
