@@ -1,0 +1,17 @@
+# properties与yml文件并存时，优先使用properties文件
+spring:
+  profiles:
+    active: dev
+
+# 在yaml文件中，可以使用---来分隔不同的情景
+---
+spring:
+  profiles: dev
+  application:
+    name: yml-name-for-dev
+
+---
+spring:
+  profiles: pro
+  application:
+    name: yml-name-for-pro
